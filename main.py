@@ -1,70 +1,58 @@
 import math
-
+# calc na fuctions
+# you ready?
 print("1 - Сложение")
 print("2 - Умножение")
 print("3 - Деление")
 print("4 - Вычетание")
 print("5 - Квадратное уравнение")
-
 number = int(input())
-
+a = int(input("1 число: "))
+b = int(input("2 число: "))
+# Сложение
 if number == 1:
+    def sum(a, b):
+       result = a + b
+       return result
+    print(sum(a, b))
 
-    print("Введите первое число")
-    number1 = int(input())
-    print("Введите второе число")
-    number2 = int(input())
-    result = number1 + number2
-    print(result)
-
-if number == 2:
-
-    print("Введите первое число")
-    number1 = int(input())
-    print("Введите второе число")
-    number2 = int(input())
-    result = number1 * number2
-    print(result)
-
-if number == 3:
-
-    print("Введите первое число")
-    number1 = int(input())
-    print("Введите второе число")
-    number2 = int(input())
-    result = number1 / number2
-    print(result)
-
+# Вычитание
 if number == 4:
+    def subtract(a, b):
+        result = a - b
+        return result
+    print(subtract(a, b))
 
-    print("Введите первое число")
-    number1 = int(input())
-    print("Введите второе число")
-    number2 = int(input())
-    result = number1 - number2
-    print(result)
+# Умножение
+if number == 2:
+    def multiply(a, b):
+        result = a * b
+        return result
+    print(multiply(a, b))
 
+# Деление
+if number == 3:
+    def divide(a, b):
+        result = a / b
+        return result
+    print(divide(a, b))
+
+# Кв уравнение
 if number == 5:
-
-    print("a*x**2+bx+c=0")
-
-print("Введите a")
-a = int(input())
-print("Введите b")
-b = int(input())
-print("Введите c")
-c = int(input())
-print("Дискрименант равен")
-D = b ** 2 - 4 * a * c
-print(D)
-
-print("Ответ")
-if D > 0:
-    x1 = -b + math.sqrt(D) / 2 * a
-    x2 = -b - math.sqrt(D) / 2 * a
-    print(x1, x2)
-elif D == 0:
-    x1 = -b / 2 * a
-    print(x1)
-else:
-    print("корней нет")
+    c = int(input("3 число: "))
+    print("Дискрименант равен: ")
+    def discrimenant(a, b, c):
+        result = b ** 2 - 4 * a * c
+        return result
+    print(discrimenant(a, b, c))
+    if discrimenant(a, b, c) > 0:
+        def x12(x1, x2):
+            x1 = -b + math.sqrt(discrimenant(a, b, c)) / 2 * a
+            x2 = -b - math.sqrt(discrimenant(a, b, c)) / 2 * a
+        print("x1, x2 равно: ", x12())
+    elif discrimenant(a, b, c) == 0:
+        def dis0(result):
+            result = -b / 2 * a
+            print("дисрименант равен 0 , поэтому ответ: ", dis0(result))
+    else:
+        print("корней нет")
