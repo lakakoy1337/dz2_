@@ -9,62 +9,51 @@ spisok = []
 number = int(input())
 spisok = number
 if spisok == 1:
+    def sum(a, b):
+        result = a + b
+        return result
 
-    print("Введите первое число")
-    number1 = int(input())
-    print("Введите второе число")
-    number2 = int(input())
-    result = number1 + number2
-    print(result)
+
+    print("Результат сложения:", sum(a, b))
 
 if spisok == 2:
+    def minus(a, b):
+        result = a - b
+        return result
 
-    print("Введите первое число")
-    number1 = int(input())
-    print("Введите второе число")
-    number2 = int(input())
-    result = number1 * number2
-    print(result)
+
+    print("Результат вычитания:", sum(a, b))
 
 if spisok == 3:
+    def prois(a, b):
+        result = a * b
+        return result
 
-    print("Введите первое число")
-    number1 = int(input())
-    print("Введите второе число")
-    number2 = int(input())
-    result = number1 / number2
-    print(result)
+
+    print("Результат умножения:", sum(a, b))
 
 if spisok == 4:
+    def dell(a, b):
+        result = a / b
+        return result
 
-    print("Введите первое число")
-    number1 = int(input())
-    print("Введите второе число")
-    number2 = int(input())
-    result = number1 - number2
-    print(result)
+
+    print("Результат деления:", sum(a, b))
 
 if spisok == 5:
+    c = int(input("Введите c: "))
 
-    print("a*x**2+bx+c=0")
-
-print("Введите a")
-a = int(input())
-print("Введите b")
-b = int(input())
-print("Введите c")
-c = int(input())
-print("Дискрименант равен")
-D = b ** 2 - 4 * a * c
-print(D)
-
-print("Ответ")
-if D > 0:
-    x1 = -b + math.sqrt(D) / 2 * a
-    x2 = -b - math.sqrt(D) / 2 * a
-    print(x1, x2)
-elif D == 0:
-    x1 = -b / 2 * a
-    print(x1)
-else:
-    print("корней нет")
+    def discriminant(a,b,c):
+        d = int((b ** 2) - 4 * a * c)  # дискриминат
+        return d
+    if discriminant(a,b,c) < 0:
+        print("корней нет")
+    else:
+        if discriminant(a,b,c) == 0:
+            x1 = -b / 2 * a
+            print("x = " + str(x1))
+        else:
+            x1 = ((-b) + (discriminant(a,b,c) ** 0.5)) / 2 * a
+            x2 = ((-b) - (discriminant(a,b,c) ** 0.5)) / 2 * a
+            print("x1 = " + str(x1))
+            print("x2 = " + str(x2))
