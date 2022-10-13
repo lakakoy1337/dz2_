@@ -5,10 +5,10 @@ print("2 - Умножение")
 print("3 - Деление")
 print("4 - Вычетание")
 print("5 - Квадратное уравнение")
-
+spisok = []
 number = int(input())
-
-if number == 1:
+spisok = number
+if spisok == 1:
 
     print("Введите первое число")
     number1 = int(input())
@@ -17,7 +17,7 @@ if number == 1:
     result = number1 + number2
     print(result)
 
-if number == 2:
+if spisok == 2:
 
     print("Введите первое число")
     number1 = int(input())
@@ -26,7 +26,7 @@ if number == 2:
     result = number1 * number2
     print(result)
 
-if number == 3:
+if spisok == 3:
 
     print("Введите первое число")
     number1 = int(input())
@@ -35,7 +35,7 @@ if number == 3:
     result = number1 / number2
     print(result)
 
-if number == 4:
+if spisok == 4:
 
     print("Введите первое число")
     number1 = int(input())
@@ -44,7 +44,7 @@ if number == 4:
     result = number1 - number2
     print(result)
 
-if number == 5:
+if spisok == 5:
 
     print("a*x**2+bx+c=0")
 
