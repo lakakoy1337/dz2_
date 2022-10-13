@@ -39,20 +39,19 @@ if number == 3:
 
 # Кв уравнение
 if number == 5:
-    c = int(input("3 число: "))
-    print("Дискрименант равен: ")
-    def discrimenant(a, b, c):
-        result = b ** 2 - 4 * a * c
-        return result
-    print(discrimenant(a, b, c))
-    if discrimenant(a, b, c) > 0:
-        def x12(x1, x2):
-            x1 = -b + math.sqrt(discrimenant(a, b, c)) / 2 * a
-            x2 = -b - math.sqrt(discrimenant(a, b, c)) / 2 * a
-        print("x1, x2 равно: ", x12())
-    elif discrimenant(a, b, c) == 0:
-        def dis0(result):
-            result = -b / 2 * a
-            print("дисрименант равен 0 , поэтому ответ: ", dis0(result))
-    else:
+    c = int(input("Введите c: "))
+
+    def discriminant(a,b,c):
+        d = int((b ** 2) - 4 * a * c)  # дискриминат
+        return d
+    if discriminant(a,b,c) < 0:
         print("корней нет")
+    else:
+        if discriminant(a,b,c) == 0:
+            x1 = -b / 2 * a
+            print("x = " + str(x1))
+        else:
+            x1 = ((-b) + (discriminant(a,b,c) ** 0.5)) / 2 * a
+            x2 = ((-b) - (discriminant(a,b,c) ** 0.5)) / 2 * a
+            print("x1 = " + str(x1))
+            print("x2 = " + str(x2))
